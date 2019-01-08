@@ -1,6 +1,8 @@
 {
   "name": "MyTel",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "f5e1b470"
 }
