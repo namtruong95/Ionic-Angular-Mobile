@@ -9,7 +9,16 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "clean": "ionic-app-scripts clean",
+    "run:android": "ionic cordova run android --target=Nexus_6P_API_27",
+    "build:ios": "ionic-app-scripts build --prod",
+    "ionic:lint": "ionic-app-scripts lint",
+    "emulate-live": "ionic cordova emulate ios -lc --debug --target=\"iPhone-X\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
+    "emulate-live-iPhone-8-Plus": "ionic cordova emulate ios -lc --target=\"iPhone-8-Plus\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
+    "emulate": "ionic cordova emulate ios --target=\"iPhone-X\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
+    "build-prod": "ionic cordova build ios --prod --release -- --buildFlag=\"-UseModernBuildSystem=0\"",
+    "device": "ionic cordova run ios -- --buildFlag=\"-UseModernBuildSystem=0\""
   },
   "private": true,
   "dependencies": {
@@ -25,6 +34,14 @@
     "@ionic-native/status-bar": "5.0.0-beta.21",
     "@ionic/angular": "4.0.0-rc.0",
     "@ionic/pro": "2.0.4",
+    "cordova-android": "7.1.4",
+    "cordova-ios": "4.5.5",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.1.3",
+    "cordova-plugin-ionic-webview": "^2.3.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
@@ -56,5 +73,19 @@
     "tslint": "~5.12.0",
     "typescript": "~3.1.6"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-keyboard": {}
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
 }
