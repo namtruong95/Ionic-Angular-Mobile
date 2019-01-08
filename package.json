@@ -1,5 +1,5 @@
 {
-  "name": "MyTel",
+  "name": "my-tel",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -10,15 +10,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "clean": "ionic-app-scripts clean",
-    "run:android": "ionic cordova run android --target=Nexus_6P_API_27",
-    "build:ios": "ionic-app-scripts build --prod",
-    "ionic:lint": "ionic-app-scripts lint",
-    "emulate-live": "ionic cordova emulate ios -lc --debug --target=\"iPhone-X\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
-    "emulate-live-iPhone-8-Plus": "ionic cordova emulate ios -lc --target=\"iPhone-8-Plus\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
-    "emulate": "ionic cordova emulate ios --target=\"iPhone-X\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
-    "build-prod": "ionic cordova build ios --prod --release -- --buildFlag=\"-UseModernBuildSystem=0\"",
-    "device": "ionic cordova run ios -- --buildFlag=\"-UseModernBuildSystem=0\""
+    "run:dev": "ionic serve -l",
+    "run:android": "ionic cordova run android -lc --debug --target=Nexus_6P_API_27",
+    "run:ios": "ionic cordova run ios -lc --debug --target=\"iPhone-X\" --buildConfig=build.json",
+    "build:debug:android": "ionic cordova build android -lc --debug",
+    "build:debug:ios": "ionic cordova build ios -lc --debug",
+    "build:release:android": "ionic cordova build android --prod --release",
+    "build:release:ios": "ionic cordova build ios --prod --release"
   },
   "private": true,
   "dependencies": {
