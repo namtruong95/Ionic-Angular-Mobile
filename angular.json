@@ -37,7 +37,7 @@
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "prod": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -72,8 +72,8 @@
             "browserTarget": "app:build"
           },
           "configurations": {
-            "production": {
-              "browserTarget": "app:build:production"
+            "prod": {
+              "browserTarget": "app:build:prod"
             },
             "ci": {
               "progress": false
@@ -129,7 +129,7 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "app:build:production"
+              "browserTarget": "app:build:prod"
             }
           }
         },
@@ -142,7 +142,7 @@
           "configurations": {
             "production": {
               "cordovaBuildTarget": "app:ionic-cordova-build:production",
-              "devServerTarget": "app:serve:production"
+              "devServerTarget": "app:serve:prod"
             }
           }
         }
